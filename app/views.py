@@ -2,6 +2,9 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import User, HealthProvider, FilePost, ProvidesFor
 
+def index(request):
+	return render(request, 'index.html')
+
 # Create your views here.
 def user_detail(request, pk):
 	user = get_object_or_404(User, pk=pk)

@@ -1,29 +1,590 @@
-<html>
-	<body>
-		<h1>User Details</h1>
-		<h4>Name={{user.name}}</h4>
-		<h4>Date of Birth={{user.dob}}</h4>
-		<h4>Address={{user.address}}</h4>
-		<h4>Telephone={{user.tele}}</h4>
-		<h4>Health Provider={{user.health_provider}}</h4>
-		<h4>Employer={{user.employer}}</h4>
-		<h4>Sex={{user.sex}}</h4>
-		<h4>Medical Conditions={{user.medical_conditions}}</h4>
-		<h4>Current Medications={{user.current_medications}}</h4>
-		<br>
-		<h4>Associated Health Providers</h4>
-		{% for hp in hps %}
-			<a href=/hp{{hp.pk}}>{{hp.name}}</a><br>
-		{% endfor %}
-		<br>
-		<a href="add-hp">Add Health Provider</a>
-		<br>
-		<br>
-		<h4>Uploaded Files</h4>
-		{% for file in files %}
-			<a href=/uploads/{{file.file.name}}>{{file.file.name}}</a><br>
-		{% endfor %}
-		<br>
-		<a href="upload-file">Upload File</a>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medilab Free Bootstrap HTML5 Template</title>
+  <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
+  <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+  <link rel="stylesheet" type="text/css" href="/uploads/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/uploads/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/uploads/css/style.css">
+  <!-- =======================================================
+    Theme Name: Medilab
+    Theme URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <!--banner-->
+  <section>
+    <div class="bg-color">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+              <h1 class="white">CliniClarify</h1>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#Profile">Profile</a></li>
+                <li class=""><a href="#testimonial">Doctor's Advice</a></li>
+                <li class=""><a href="#medical">Medical History</a></li>
+                <li class=""><a href="#blood">Blood Tests</a></li>
+                <li class=""><a href="#xray">X-Rays</a></li>
+                <li class=""><a href="#EKG">EKG</a></li>
+                <li class=""><a href="#Immunizations">Immunizations</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+    </div>
+  </section>
+  <!--/ banner-->
+  <!--/ profile-->
+	<h1>User Details</h1>
+	<h4>Name={{user.name}}</h4>
+	<h4>Date of Birth={{user.dob}}</h4>
+	<h4>Address={{user.address}}</h4>
+	<h4>Telephone={{user.tele}}</h4>
+	<h4>Health Provider={{user.health_provider}}</h4>
+	<h4>Employer={{user.employer}}</h4>
+	<h4>Sex={{user.sex}}</h4>
+	<h4>Medical Conditions={{user.medical_conditions}}</h4>
+	<h4>Current Medications={{user.current_medications}}</h4>
+	<br>
+	<h4>Associated Health Providers</h4>
+	{% for hp in hps %}
+		<a href=/hp{{hp.pk}}>{{hp.name}}</a><br>
+	{% endfor %}
+	<br>
+	<a href="add-hp">Add Health Provider</a>
+	<br>
+	<br>
+	<h4>Uploaded Files</h4>
+	{% for file in files %}
+		<a href=/uploads/{{file.file.name}}>{{file.file.name}}</a><br>
+	{% endfor %}
+	<br>
+	<a href="upload-file">Upload File</a>
+  <section id="Profile" >
+      
+          <div class="section-padding">
+          <div class="container" style="height: 100%">
+              <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="thumbnail">
+                    <img src="/uploads/img/doctor1.jpg" alt="..." class="team-img">
+                    <div class="caption">
+                      <h3>Jessica Wally</h3>
+                      <p>Doctor</p>
+                      <p>99 Wallaby Way</p>
+                      <p>123-456-7890</p>
+                      <p>patient@hospital.com</p>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8 col-sm-8" style="height: 500px;"  >
+                    <div class="row" >
+                        <div class="divTable greyGridTable">
+                            <div class="divTableBody">
+                            <div class="divTableRow">
+                            <div class="divTableCell">cell1_1</div>
+                            <div class="divTableCell">cell2_1</div>
+                            <div class="divTableCell">cell3_1</div>
+                            </div>
+                            <div class="divTableRow">
+                            <div class="divTableCell">cell1_2</div>
+                            <div class="divTableCell">cell2_2</div>
+                            <div class="divTableCell">cell3_2</div>
+                            </div>
+                            <div class="divTableRow">
+                            <div class="divTableCell">cell1_3</div>
+                            <div class="divTableCell">cell2_3</div>
+                            <div class="divTableCell">cell3_3</div>
+                            </div>
+                            </div>
+                          </div>
+                      </div>
+
+                </div>
+              </div>
+            </div>
+            </div>
+      
+    
+  </section>
+  <!--/ profile-->
+  <!--/ Doctor's advice -->
+  <section id="testimonial" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="ser-title">see what doctors are saying?</h2>
+            <hr class="botm-line">
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="testi-details">
+              <!-- Paragraph -->
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="testi-info">
+              <!-- User Image -->
+              <a href="#"><img src="/uploads/img/thumb.png" alt="" class="img-responsive"></a>
+              <!-- User Name -->
+              <h3>Alex<span>Texas</span></h3>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="testi-details">
+              <!-- Paragraph -->
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="testi-info">
+              <!-- User Image -->
+              <a href="#"><img src="/uploads/img/thumb.png" alt="" class="img-responsive"></a>
+              <!-- User Name -->
+              <h3>Alex<span>Texas</span></h3>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="testi-details">
+              <!-- Paragraph -->
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="testi-info">
+              <!-- User Image -->
+              <a href="#"><img src="/uploads/img/thumb.png" alt="" class="img-responsive"></a>
+              <!-- User Name -->
+              <h3>Alex<span>Texas</span></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!--/Doctor's advice-->
+    <!--cta 2-->
+    <section id="cta-2" class="section-padding;">
+        <div class="container">
+          <div class=" row">
+              <div>
+                      <h2 class="ser-title">Medical History</h2>
+                      <hr class="botm-line">
+              </div>
+              <div class="divTable steelBlueCols">
+                  <div class="divTableHeading">
+                  <div class="divTableRow">
+                  <div class="divTableHead">Name</div>
+                  <div class="divTableHead">File</div>
+                  <div class="divTableHead">Date</div>
+                  </div>
+                  </div>
+                  <div class="divTableBody">
+                  <div class="divTableRow">
+                  <div class="divTableCell">cell1_1</div>
+                  <div class="divTableCell">cell2_1</div>
+                  <div class="divTableCell">cell3_1</div>
+                  </div>
+                  <div class="divTableRow">
+                  <div class="divTableCell">cell1_2</div>
+                  <div class="divTableCell">cell2_2</div>
+                  <div class="divTableCell">cell3_2</div>
+                  </div>
+                  <div class="divTableRow">
+                  <div class="divTableCell">cell1_3</div>
+                  <div class="divTableCell">cell2_3</div>
+                  <div class="divTableCell">cell3_3</div>
+                  </div>
+                  <div class="divTableRow">
+                  <div class="divTableCell">cell1_4</div>
+                  <div class="divTableCell">cell2_4</div>
+                  <div class="divTableCell">cell3_4</div>
+                  </div>
+                  <div class="divTableRow">
+                  <div class="divTableCell">cell1_5</div>
+                  <div class="divTableCell">cell2_5</div>
+                  <div class="divTableCell">cell3_5</div>
+                  </div>
+                  <div class="divTableRow">
+                  <div class="divTableCell">cell1_6</div>
+                  <div class="divTableCell">cell2_6</div>
+                  <div class="divTableCell">cell3_6</div>
+                  </div>
+                  <div class="divTableRow">
+                  <div class="divTableCell">cell1_7</div>
+                  <div class="divTableCell">cell2_7</div>
+                  <div class="divTableCell">cell3_7</div>
+                  </div>
+                  <div class="divTableRow">
+                  <div class="divTableCell">cell1_8</div>
+                  <div class="divTableCell">cell2_8</div>
+                  <div class="divTableCell">cell3_8</div>
+                  </div>
+                  <div class="divTableRow">
+                  <div class="divTableCell">cell1_9</div>
+                  <div class="divTableCell">cell2_9</div>
+                  <div class="divTableCell">cell3_9</div>
+                  </div>
+                  <div class="divTableRow">
+                  <div class="divTableCell">cell1_10</div>
+                  <div class="divTableCell">cell2_10</div>
+                  <div class="divTableCell">cell3_10</div>
+                  </div>
+                  <div class="divTableRow">
+                  <div class="divTableCell">cell1_11</div>
+                  <div class="divTableCell">cell2_11</div>
+                  <div class="divTableCell">cell3_11</div>
+                  </div>
+                  </div>
+                  <div class="blueTable steelBlueCols"><div class="tableFootStyle"><div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div></div></div>
+
+                  </div>
+          </div>
+        </div>
+      </section>
+      <!--cta-->
+        <!--cta 2-->
+        <section id="cta-2" class="section-padding;">
+            <div class="container">
+              <div class=" row">
+                  <div>
+                      <h2 class="ser-title">Blood Tests</h2>
+                      <hr class="botm-line">
+              </div>
+                  <div class="divTable steelBlueCols">
+                      <div class="divTableHeading">
+                      <div class="divTableRow">
+                      <div class="divTableHead">Name</div>
+                      <div class="divTableHead">File</div>
+                      <div class="divTableHead">Date</div>
+                      </div>
+                      </div>
+                      <div class="divTableBody">
+                      <div class="divTableRow">
+                      <div class="divTableCell">cell1_1</div>
+                      <div class="divTableCell">cell2_1</div>
+                      <div class="divTableCell">cell3_1</div>
+                      </div>
+                      <div class="divTableRow">
+                      <div class="divTableCell">cell1_2</div>
+                      <div class="divTableCell">cell2_2</div>
+                      <div class="divTableCell">cell3_2</div>
+                      </div>
+                      <div class="divTableRow">
+                      <div class="divTableCell">cell1_3</div>
+                      <div class="divTableCell">cell2_3</div>
+                      <div class="divTableCell">cell3_3</div>
+                      </div>
+                      <div class="divTableRow">
+                      <div class="divTableCell">cell1_4</div>
+                      <div class="divTableCell">cell2_4</div>
+                      <div class="divTableCell">cell3_4</div>
+                      </div>
+                      <div class="divTableRow">
+                      <div class="divTableCell">cell1_5</div>
+                      <div class="divTableCell">cell2_5</div>
+                      <div class="divTableCell">cell3_5</div>
+                      </div>
+                      <div class="divTableRow">
+                      <div class="divTableCell">cell1_6</div>
+                      <div class="divTableCell">cell2_6</div>
+                      <div class="divTableCell">cell3_6</div>
+                      </div>
+                      <div class="divTableRow">
+                      <div class="divTableCell">cell1_7</div>
+                      <div class="divTableCell">cell2_7</div>
+                      <div class="divTableCell">cell3_7</div>
+                      </div>
+                      <div class="divTableRow">
+                      <div class="divTableCell">cell1_8</div>
+                      <div class="divTableCell">cell2_8</div>
+                      <div class="divTableCell">cell3_8</div>
+                      </div>
+                      <div class="divTableRow">
+                      <div class="divTableCell">cell1_9</div>
+                      <div class="divTableCell">cell2_9</div>
+                      <div class="divTableCell">cell3_9</div>
+                      </div>
+                      <div class="divTableRow">
+                      <div class="divTableCell">cell1_10</div>
+                      <div class="divTableCell">cell2_10</div>
+                      <div class="divTableCell">cell3_10</div>
+                      </div>
+                      <div class="divTableRow">
+                      <div class="divTableCell">cell1_11</div>
+                      <div class="divTableCell">cell2_11</div>
+                      <div class="divTableCell">cell3_11</div>
+                      </div>
+                      </div>
+                      <div class="blueTable steelBlueCols"><div class="tableFootStyle"><div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div></div></div>
+    
+                      </div>
+              </div>
+            </div>
+          </section>
+          <!--cta-->
+      <!--cta 2-->
+      <section id="cta-2" class="section-padding;">
+          <div class="container">
+            <div class=" row">
+                <div>
+                    <h2 class="ser-title">X-Rays</h2>
+                    <hr class="botm-line">
+            </div>
+                <div class="divTable steelBlueCols">
+                    <div class="divTableHeading">
+                    <div class="divTableRow">
+                    <div class="divTableHead">Name</div>
+                    <div class="divTableHead">File</div>
+                    <div class="divTableHead">Date</div>
+                    </div>
+                    </div>
+                    <div class="divTableBody">
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_1</div>
+                    <div class="divTableCell">cell2_1</div>
+                    <div class="divTableCell">cell3_1</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_2</div>
+                    <div class="divTableCell">cell2_2</div>
+                    <div class="divTableCell">cell3_2</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_3</div>
+                    <div class="divTableCell">cell2_3</div>
+                    <div class="divTableCell">cell3_3</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_4</div>
+                    <div class="divTableCell">cell2_4</div>
+                    <div class="divTableCell">cell3_4</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_5</div>
+                    <div class="divTableCell">cell2_5</div>
+                    <div class="divTableCell">cell3_5</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_6</div>
+                    <div class="divTableCell">cell2_6</div>
+                    <div class="divTableCell">cell3_6</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_7</div>
+                    <div class="divTableCell">cell2_7</div>
+                    <div class="divTableCell">cell3_7</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_8</div>
+                    <div class="divTableCell">cell2_8</div>
+                    <div class="divTableCell">cell3_8</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_9</div>
+                    <div class="divTableCell">cell2_9</div>
+                    <div class="divTableCell">cell3_9</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_10</div>
+                    <div class="divTableCell">cell2_10</div>
+                    <div class="divTableCell">cell3_10</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_11</div>
+                    <div class="divTableCell">cell2_11</div>
+                    <div class="divTableCell">cell3_11</div>
+                    </div>
+                    </div>
+                    <div class="blueTable steelBlueCols"><div class="tableFootStyle"><div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div></div></div>
+  
+                    </div>
+            </div>
+          </div>
+        </section>
+        <!--cta-->
+         <!--cta 2-->
+      <section id="cta-2" class="section-padding;">
+          <div class="container">
+            <div class=" row">
+                <div>
+                    <h2 class="ser-title">EKG</h2>
+                    <hr class="botm-line">
+            </div>
+                <div class="divTable steelBlueCols">
+                    <div class="divTableHeading">
+                    <div class="divTableRow">
+                    <div class="divTableHead">Name</div>
+                    <div class="divTableHead">File</div>
+                    <div class="divTableHead">Date</div>
+                    </div>
+                    </div>
+                    <div class="divTableBody">
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_1</div>
+                    <div class="divTableCell">cell2_1</div>
+                    <div class="divTableCell">cell3_1</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_2</div>
+                    <div class="divTableCell">cell2_2</div>
+                    <div class="divTableCell">cell3_2</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_3</div>
+                    <div class="divTableCell">cell2_3</div>
+                    <div class="divTableCell">cell3_3</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_4</div>
+                    <div class="divTableCell">cell2_4</div>
+                    <div class="divTableCell">cell3_4</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_5</div>
+                    <div class="divTableCell">cell2_5</div>
+                    <div class="divTableCell">cell3_5</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_6</div>
+                    <div class="divTableCell">cell2_6</div>
+                    <div class="divTableCell">cell3_6</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_7</div>
+                    <div class="divTableCell">cell2_7</div>
+                    <div class="divTableCell">cell3_7</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_8</div>
+                    <div class="divTableCell">cell2_8</div>
+                    <div class="divTableCell">cell3_8</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_9</div>
+                    <div class="divTableCell">cell2_9</div>
+                    <div class="divTableCell">cell3_9</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_10</div>
+                    <div class="divTableCell">cell2_10</div>
+                    <div class="divTableCell">cell3_10</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_11</div>
+                    <div class="divTableCell">cell2_11</div>
+                    <div class="divTableCell">cell3_11</div>
+                    </div>
+                    </div>
+                    <div class="blueTable steelBlueCols"><div class="tableFootStyle"><div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div></div></div>
+  
+                    </div>
+            </div>
+          </div>
+        </section>
+        <!--cta-->
+         <!--cta 2-->
+      <section id="cta-2" class="section-padding;">
+          <div class="container">
+            <div class=" row">
+                <div>
+                    <h2 class="ser-title">Immunizations</h2>
+                    <hr class="botm-line">
+            </div>
+                <div class="divTable steelBlueCols">
+                    <div class="divTableHeading">
+                    <div class="divTableRow">
+                    <div class="divTableHead">Name</div>
+                    <div class="divTableHead">File</div>
+                    <div class="divTableHead">Date</div>
+                    </div>
+                    </div>
+                    <div class="divTableBody">
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_1</div>
+                    <div class="divTableCell">cell2_1</div>
+                    <div class="divTableCell">cell3_1</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_2</div>
+                    <div class="divTableCell">cell2_2</div>
+                    <div class="divTableCell">cell3_2</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_3</div>
+                    <div class="divTableCell">cell2_3</div>
+                    <div class="divTableCell">cell3_3</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_4</div>
+                    <div class="divTableCell">cell2_4</div>
+                    <div class="divTableCell">cell3_4</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_5</div>
+                    <div class="divTableCell">cell2_5</div>
+                    <div class="divTableCell">cell3_5</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_6</div>
+                    <div class="divTableCell">cell2_6</div>
+                    <div class="divTableCell">cell3_6</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_7</div>
+                    <div class="divTableCell">cell2_7</div>
+                    <div class="divTableCell">cell3_7</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_8</div>
+                    <div class="divTableCell">cell2_8</div>
+                    <div class="divTableCell">cell3_8</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_9</div>
+                    <div class="divTableCell">cell2_9</div>
+                    <div class="divTableCell">cell3_9</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_10</div>
+                    <div class="divTableCell">cell2_10</div>
+                    <div class="divTableCell">cell3_10</div>
+                    </div>
+                    <div class="divTableRow">
+                    <div class="divTableCell">cell1_11</div>
+                    <div class="divTableCell">cell2_11</div>
+                    <div class="divTableCell">cell3_11</div>
+                    </div>
+                    </div>
+                    <div class="blueTable steelBlueCols"><div class="tableFootStyle"><div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div></div></div>
+  
+                    </div>
+            </div>
+          </div>
+        </section>
+        <!--cta-->
+  <!--/ footer-->
+
+  <script src="/uploads/js/jquery.min.js"></script>
+  <script src="/uploads/js/jquery.easing.min.js"></script>
+  <script src="/uploads/js/bootstrap.min.js"></script>
+  <script src="/uploads/js/custom.js"></script>
+  <script src="/uploads/contactform/contactform.js"></script>
+
+</body>
+
 </html>

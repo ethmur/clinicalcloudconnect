@@ -22,6 +22,7 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+	re_path(r'^$', views.index),
 	re_path(r'^user(?P<pk>\d+)/$', views.user_detail),
 	re_path(r'^user(?P<pk>\d+)/upload-file$', views.user_upload_file),
 	re_path(r'^user(?P<pk>\d+)/post-file$', views.user_post_file),

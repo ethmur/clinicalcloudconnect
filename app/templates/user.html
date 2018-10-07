@@ -34,7 +34,7 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				      </button>
-              <h1 class="white">CliniClarify</h1>
+              <h1 class="white">Clinical Clarity</h1>
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
@@ -55,29 +55,6 @@
   </section>
   <!--/ banner-->
   <!--/ profile-->
-	<h1>User Details</h1>
-		<h4>Name={{user.name}}</h4>
-		<h4>Date of Birth={{user.dob}}</h4>
-		<h4>Address={{user.address}}</h4>
-		<h4>Telephone={{user.tele}}</h4>
-		<h4>Health Provider={{user.health_provider}}</h4>
-		<h4>Employer={{user.employer}}</h4>
-		<h4>Sex={{user.sex}}</h4>
-		<h4>Medical Conditions={{user.medical_conditions}}</h4>
-		<h4>Current Medications={{user.current_medications}}</h4>
-		<br>
-		<h4>Associated Health Providers</h4>
-		{% for hp in hps %}
-			<a href=/hp{{hp.pk}}>{{hp.name}}</a><br>
-		{% endfor %}
-		<br>
-		<br>
-		<h4>Uploaded Files</h4>
-		{% for file in files %}
-			<a href=/uploads/{{file.file.name}}>{{file.file.name}}</a><br>
-		{% endfor %}
-		<br>
-		<a href="upload-file">Upload File</a>
   <section id="Profile" >
       
           <div class="section-padding">

@@ -22,7 +22,7 @@
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
   <!--banner-->
-  <section>
+  <section id="banner" class="banner">
     <div class="bg-color">
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -33,35 +33,39 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				      </button>
-              <h1 class="white">CliniClarify</h1>
+              <a class="navbar-brand" href="#"><img src="/uploads//uploads/img/logo.png" class="img-responsive" style="width: 140px; margin-top: -16px;"></a>
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#Profile">Profile</a></li>
-                <li class=""><a href="#testimonial">Doctor's Advice</a></li>
-                <li class=""><a href="#medical">Medical History</a></li>
-                <li class=""><a href="#blood">Blood Tests</a></li>
-                <li class=""><a href="#xray">X-Rays</a></li>
-                <li class=""><a href="#EKG">EKG</a></li>
-                <li class=""><a href="#Immunizations">Immunizations</a></li>
+                <li class="active"><a href="#banner">Home</a></li>
+                <li class=""><a href="#service">Services</a></li>
+                <li class=""><a href="#about">About</a></li>
+                <li class=""><a href="#testimonial">Testimonial</a></li>
+                <li class=""><a href="#contact">Contact</a></li>
               </ul>
             </div>
           </div>
         </div>
       </nav>
-      
+      <div class="container">
+        <div class="row">
+          <div class="banner-info">
+            <div class="banner-logo text-center">
+              <img src="/uploads//uploads/img/logo.png" class="img-responsive">
+            </div>
+            <div class="banner-text text-center">
+              <h1 class="white">Healthcare at your desk!!</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>tempor incididunt ut labore et dolore magna aliqua.</p>
+              <a href="#contact" class="btn btn-appoint">Make an Appointment.</a>
+            </div>
+            <div class="overlay-detail text-center">
+              <a href="#service"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  <h1>Health Provider Details</h1>
-		<h4>Name={{hp.name}}</h4>
-		<h4>Address={{hp.address}}</h4>
-		<h4>Telephone={{hp.tele}}</h4>
-		<br>
-		<h4>Associated Users</h4>
-		{% for user in users %}
-			<a href=user{{user.pk}}/>{{user.name}}</a><br>
-		{% endfor %}
-		<br>
   <!--/ banner-->
   <!--service-->
   <section id="service" class="section-padding">

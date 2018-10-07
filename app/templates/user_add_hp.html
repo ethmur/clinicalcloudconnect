@@ -1,0 +1,14 @@
+<html>
+	<body>
+		<h1>Add Health Provider</h1>
+		<form action="post-add-hp" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<select name="hp">
+				{% for hp in hps %}
+					<option value={{hp.pk}}>{{hp.name}}</option>
+				{% endfor %}
+			  </select>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>

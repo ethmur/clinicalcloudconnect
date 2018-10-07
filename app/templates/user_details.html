@@ -1,0 +1,20 @@
+<html>
+	<body>
+		<h1>User Details</h1>
+		<h4>Name={{user.name}}</h4>
+		<h4>Date of Birth={{user.dob}}</h4>
+		<h4>Address={{user.address}}</h4>
+		<h4>Telephone={{user.tele}}</h4>
+		<h4>Health Provider={{user.health_provider}}</h4>
+		<h4>Employer={{user.employer}}</h4>
+		<h4>Sex={{user.sex}}</h4>
+		<h4>Medical Conditions={{user.medical_conditions}}</h4>
+		<h4>Current Medications={{user.current_medications}}</h4>
+		<h4>Uploaded Files</h4>
+		{% for file in files %}
+			<a href=/{{file.file.name}}>{{file.file.name}}</a><br>
+		{% endfor %}
+		<br>
+		<a href="upload-file">Upload File</a>
+	</body>
+</html>
